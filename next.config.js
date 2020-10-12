@@ -7,7 +7,7 @@ module.exports = {
     }
   },
   //assetPrefix: '',
-  assetPrefix: !debug ? '/' : '',
+  assetPrefix: !debug ? '/out/' : '',
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config
     // console.log('webpack');
@@ -22,7 +22,7 @@ module.exports = {
     return config
   },
   env: {
-    BACKEND_URL: '/',
+    BACKEND_URL: '/out/',
   },/*,
   webpackDevMiddleware: (config) => {
     // Perform customizations to webpack dev middleware config
