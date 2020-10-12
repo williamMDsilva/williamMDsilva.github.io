@@ -36,7 +36,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #ffd600;
   text-decoration: none;
 }
 
@@ -69,6 +69,7 @@
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+  display: block;
 }
 
 .grid {
@@ -88,15 +89,16 @@
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
-  border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #000;
+  border-color: #000;
+  background-color: #ffd600;
 }
 
 .card h3 {
@@ -112,6 +114,14 @@
 
 .logo {
   height: 1em;
+}
+
+.subtile{
+  padding: 0.75rem;
+}
+
+.mark{
+  background-color: #ffd600;
 }
 
 @media (max-width: 600px) {

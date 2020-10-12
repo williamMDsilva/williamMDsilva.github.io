@@ -1,0 +1,32 @@
+.modal_container {
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #fffef8;
+}
+
+.close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;        
+}
+
+.close:hover {
+    background-color: #ffd600;
+    color: #000;
+}
+
