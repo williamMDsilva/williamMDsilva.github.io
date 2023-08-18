@@ -1,14 +1,13 @@
 {
-  "name": "profile_william",
+  "name": "profile-william",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "autoprefixer": "10.4.15",

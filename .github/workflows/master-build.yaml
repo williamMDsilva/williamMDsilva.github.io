@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: "16.x"
 
-      - name: Installing my packages
+      - name: Install packages
         run: npm ci
 
-      - name: Build my App
+      - name: Build App
         run: npm run build && npm run export && touch ./out/.nojekyll
 
       - name: Deploy 🚀
