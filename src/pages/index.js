@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import IconLinkedIn from "@/components/icons/LinkedIn";
-import IconGitHub from "@/components/icons/GitHub";
-import IconBook from "@/components/icons/Book";
-import HoverBadge from "@/components/icons/Hover";
+import IconLinkedIn from "@/components/icons/linkedIn/LinkedIn";
+import IconGitHub from "@/components/icons/github/GitHub";
+import IconBook from "@/components/icons/books/Book";
+import HoverBadge from "@/components/hoverBadge/HoverBadge";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,12 +49,6 @@ export default function Home() {
                   </div>
                 </a>
               </HoverBadge>
-              {/*
-                <a
-                  href="https://medium.com/@william.moreirasilva"
-                >
-                  Medium
-                </a> */}
             </div>
           </div>
         </header>
