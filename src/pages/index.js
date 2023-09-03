@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className="bg-gradient-to-b from-blue-dark to-black"
+      className="bg-gradient-to-b from-blue-dark to-blue-light"
       style={{
         overflow: "hidden",
       }}
@@ -57,7 +57,7 @@ export default function Home() {
           className={`flex flex-col justify-between items-center ${inter.className}`}
         >
           <div className="text-center">
-            <h1 className="font-bold text-2xl sm:text-7xl">
+            <h1 className="font-bold text-white text-2xl sm:text-7xl">
               William Moreira da Silva
             </h1>
           </div>
@@ -72,12 +72,12 @@ export default function Home() {
           </div>
         </section>
         <section className="space-y-2">
-          <div className="border-solid border-l-4 border-yellow p-3">
+          <div className="border-solid border-l-4 border-yellow p-3 text-white">
             <span className="text-3xl font-black">Contacts</span>
           </div>
           <div className="flex">
             <div className="flex-1 flex-col p-2">
-              <ul className="list-outside divide-y divide-yellow text-md font-thin">
+              <ul className="list-outside divide-y divide-yellow text-md font-thin text-white">
                 <li className="p-1">william.moreirasilva@hotmail</li>
                 <li className="p-1">+55 (45) 9 9835 - 2261</li>
                 <li></li>
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
 
       <footer className="flex flex-col items-right">
-        <div className="flex flex-col items-center bg-yellow text-black font-thin text-sm">
+        <div className="flex flex-col items-center bg-yellow text-black font-thin text-sm ">
           <span>By William - {new Date().getFullYear()}</span>
         </div>
       </footer>

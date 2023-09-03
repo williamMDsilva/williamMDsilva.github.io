@@ -23,9 +23,11 @@ module.exports = {
       },
     },
     colors: {
-      yellow: "#FFDE59",
+      yellow: "#FFC219",
       "blue-dark": "#002B64",
+      "blue-light": "#004EB5",
       black: "#272727",
+      white: "#F0F6F6",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
