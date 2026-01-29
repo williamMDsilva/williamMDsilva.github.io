@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.personal.name }} - {{ data.personal.title }}</title>
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='images/profile.jpeg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <a href="/lang/en-us">🇺🇸 EN</a>
+        <a href="/lang/pt-br">🇧🇷 PT</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="profile-img">
+                <img src="{{ url_for('static', filename='./images/profile.jpeg') }}" alt="Profile Picture">
+            </div>
+            <h1>{{ data.personal.name }}</h1>
+            <p><strong>{{ data.personal.title }}</strong></p>
+            <p class="summary">{{ data.personal.summary }}</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                {% for stat in data.stats %}
+                <div class="stat-item">
+                    <h3>{{ stat.value }}</h3>
+                    <p>{{ stat.label }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-labels">
+                {% for skill in data.skills_flat %}
+                <span class="skill-label">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                {% if lang == 'pt' %}Experiência{% else %}Experience{% endif %}
+            </h2>
+            <div class="experience-grid">
+                {% for exp in data.experience %}
+                <div class="experience-card">
+                    <h3>{{ exp.position }}</h3>
+                    <div class="company">{{ exp.company }}</div>
+                    <div class="period">{{ exp.period }}</div>
+                    <p>{{ exp.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2 class="section-title">
+                {% if lang == 'pt' %}Educação{% else %}Education{% endif %}
+            </h2>
+            <div class="education-grid">
+                {% for edu in data.education %}
+                <div class="education-card">
+                    {% if edu.degree %}
+                        <h3>{{ edu.degree }}</h3>
+                        <div class="institution">{{ edu.institution }}</div>
+                        <div class="period">{{ edu.period }}</div>
+                    {% else %}
+                        <h3>{{ edu.certification }}</h3>
+                        <div class="period">{{ edu.year }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="email-copy">
+                    <button onclick="copyEmail()" class="copy-btn">
+                        <span>{{ data.personal.email }}</span>
+                    </button>
+                </div>
+                <a href="{{ data.personal.linkedin }}" target="_blank">💼 LinkedIn</a>
+                <a href="{{ data.personal.devto }}" target="_blank">👨‍💻 Dev.to</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('{{ data.personal.email }}');
+            const btn = document.querySelector('.copy-btn');
+            btn.textContent = '✓';
+            setTimeout(() => btn.textContent = '{{ data.personal.email }}', 150);
+        }
+    </script>
+</body>
+</html>

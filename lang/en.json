@@ -1,0 +1,102 @@
+{
+  "personal": {
+    "name": "William Moreira da Silva",
+    "title": "Senior Software Engineer",
+    "email": "william.moreirasilva@hotmail.com",
+    "linkedin": "https://linkedin.com/in/williammdsilva",
+    "devto": "https://dev.to/williammdsilva",
+    "summary": "Software Engineer, AWS Certified Developer – Associate, with 10 years of experience in web and mobile development. I have worked in operations management, CRM, and education sectors, always tackling challenges and creating solutions for complex problems. With an analytical mindset and a focus on new technologies, I work well independently or in multidisciplinary teams."
+  },
+  "experience": [
+    {
+      "company": "Compass.UOL",
+      "position": "Senior Software Developer (remote)",
+      "period": "Sep 2024 - Present",
+      "description": "Developed scalable backend services using BFF architecture with Node.js and NestJS. Reduced code conflicts by 60% through linters and dev tools. Improved user experience with React."
+    },
+    {
+      "company": "Contractor",
+      "position": "Senior Software Architect (remote)",
+      "period": "Dec 2021 - Sep 2024",
+      "description": "Provided software consulting and developed products for education, sales operations, and cryptocurrency sectors. Implemented cloud-native solutions using AWS, REST APIs, and GraphQL."
+    },
+    {
+      "company": "Btime (remote)",
+      "position": "Senior Software Engineer",
+      "period": "Mar 2020 - July 2024",
+      "description": "Delivered features for core platforms, reduced technical debt by refactoring legacy code, and optimized development processes using Elixir, React, and Kubernetes."
+    },
+    {
+      "company": "TOTVS",
+      "position": "Software Developer",
+      "period": "Mar 2019 - Nov 2020",
+      "description": "Collaborated on CRM solutions for enterprise customers. Delivered full-stack solutions and modernized legacy codebases using Java, SQL, and React."
+    },
+    {
+      "company": "Self Employed",
+      "position": "Full Stack Engineer",
+      "period": "Feb 2018 - Mar 2019",
+      "description": "Built tailored software solutions including stock and operations management systems using PHP, Laravel, and Angular."
+    },
+    {
+      "company": "Aprova",
+      "position": "Full Stack Developer",
+      "period": "Sep 2016 - Feb 2018",
+      "description": "Migrated features from AngularJS to Angular 2 and developed solutions for public sector compliance using Laravel and AWS."
+    },
+    {
+      "company": "Self Employed",
+      "position": "Full Stack Developer",
+      "period": "Jan 2016 - Sep 2016",
+      "description": "Delivered custom WordPress sites and responsive templates from PSD designs."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Federal University of Technology of Paraná",
+      "degree": "Technologist, Internet Systems",
+      "period": "2026"
+    },
+    {
+      "institution": "Descomplica",
+      "degree": "BSc, Computer Engineering",
+      "period": "2026"
+    },
+    {
+      "certification": "AWS Certified Developer - Associate (DVA-C02)",
+      "year": "2025"
+    }
+  ],
+  "skills_flat": [
+    "Git",
+    "Javascript (ES6)",
+    "SQL",
+    "Node.js",
+    "Elixir",
+    "Java",
+    "Dart",
+    "Docker",
+    "Kubernetes",
+    "AWS (EC2, S3, CloudFront)",
+    "MySQL",
+    "Postgres",
+    "MongoDB",
+    "Firebase",
+    "React",
+    "React Native",
+    "Flutter",
+    "RabbitMQ"
+  ],
+  "skills": [
+    { "name": "Python", "level": 90 },
+    { "name": "JavaScript", "level": 85 },
+    { "name": "React", "level": 80 },
+    { "name": "Flask", "level": 85 }
+  ],
+  "stats": [
+    { "label": "Years of Experience", "value": "10+" },
+    { "label": "Interns Mentored", "value": "70+" },
+    { "label": "Continuous Learning", "value": "∞" },
+    { "label": "Ignored Bugs", "value": "0" }
+  ]
+}
