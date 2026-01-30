@@ -2,8 +2,8 @@ name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [main]
+
   workflow_dispatch:
 
 permissions:
@@ -21,25 +21,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
-          
+          python-version: "3.11"
+
       - name: Install dependencies
         run: pip install -r requirements.txt
-        
+
       - name: Build static site
         run: python build.py -o dist
-        
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: "./dist"
 
   deploy:
     environment:
