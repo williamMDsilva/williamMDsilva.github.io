@@ -16,7 +16,7 @@ def render_template(template_path, data, lang):
     # Mock Flask's url_for function
     def url_for(endpoint, filename=None):
         if endpoint == 'static':
-            return filename
+            return "static/" + filename
         return '/'
     
     env.globals['url_for'] = url_for
@@ -40,9 +40,11 @@ def build_static_site(output_dir='dist'):
         html_content = render_template('templates/index.html', data, lang_code)
         
         # Replace Flask template syntax with static content
-        html_content = html_content.replace("{{ url_for('static', filename='css/style.css') }}", 'static/css/style.css')
-        html_content = html_content.replace("{{ url_for('static', filename='images/profile.jpeg') }}", 'static/images/profile.jpeg')
-        html_content = html_content.replace("{{ url_for('static', filename='./images/profile.jpeg') }}", 'static/images/profile.jpeg')
+        html_content = html_content.replace("{{ url_for('static', filename='css/style.css') }}", './static/css/style.css')
+        html_content = html_content.replace("{{ url_for('static', filename='images/profile.jpeg') }}", './static/images/profile.jpeg')
+        html_content = html_content.replace("{{ url_for('static', filename='./images/profile.jpeg') }}", './static/images/profile.jpeg')
+
+        print(html_content)
         
         # Write HTML file
         filename = 'index.html' if lang_code == 'en' else f'index-{lang_code}.html'
