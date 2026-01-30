@@ -45,6 +45,7 @@ def build_static_site(output_dir='dist'):
         html_content = html_content.replace("{{ url_for('static', filename='./images/profile.jpeg') }}", './static/images/profile.jpeg')
 
         html_content = html_content.replace("/lang/pt-br", 'index-pt.html')
+        html_content = html_content.replace("/lang/en-us", 'index.html')
 
         print(html_content)
         
